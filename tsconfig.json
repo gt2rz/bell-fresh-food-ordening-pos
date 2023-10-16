@@ -15,6 +15,9 @@
       "@/icons/*": [
         "src/icons/*"
       ],
+      "@/icons/categories/*": [
+        "src/icons/categories/*"
+      ],
     }
   }
 }
