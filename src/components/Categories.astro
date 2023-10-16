@@ -8,28 +8,30 @@ import TacosIcon from "@/icons/categories/Tacos.astro";
 import DonutIcon from "@/icons/categories/Donut.astro";
 
 const categories = [
-  { id: 1, label: "Hamburger", icon: HamburgerIcon, width: 64, height: 64 },
-  { id: 2, label: "Pizza", icon: PizzaIcon, width: 64, height: 64 },
-  { id: 3, label: "Drinks", icon: DrinksIcon, width: 64, height: 64 },
-  { id: 4, label: "Salad", icon: SaladIcon, width: 64, height: 64 },
-  { id: 5, label: "Sorbet", icon: SorbetsIcon, width: 64, height: 64 },
-  { id: 6, label: "Tacos", icon: TacosIcon, width: 64, height: 64 },
-  { id: 7, label: "Donuts", icon: DonutIcon, width: 64, height: 64 },
+  { id: 1, label: "Hamburger", icon: HamburgerIcon, width: 72, height: 72 },
+  { id: 2, label: "Pizza", icon: PizzaIcon, width: 72, height: 72 },
+  { id: 3, label: "Drinks", icon: DrinksIcon, width: 72, height: 72 },
+  { id: 4, label: "Salad", icon: SaladIcon, width: 72, height: 72 },
+  { id: 5, label: "Sorbet", icon: SorbetsIcon, width: 72, height: 72 },
+  { id: 6, label: "Tacos", icon: TacosIcon, width: 72, height: 72 },
+  { id: 7, label: "Donuts", icon: DonutIcon, width: 72, height: 72 },
 ];
 ---
 
-<div class="flex gap-6 py-8 overflow-scroll">
+<div class="flex gap-6 pt-12 pb-6 overflow-x-scroll">
   {
     categories.map((category) => {
       return (
-        <div class="min-w-[200px] min-h-[140px] text-yellow-600 flex flex-col items-center p-4 bg-yellow-100/20 border-2 border-yellow-500 rounded-3xl cursor-pointer hover:bg-orange-400 hover:border-orange-500 hover:text-white shadow-lg">
+        <div class="min-w-[160px] min-h-[160px] text-yellow-600 flex flex-col items-center p-4 bg-yellow-100/20 border-2 border-yellow-500 rounded-[44px] cursor-pointer hover:bg-orange-400 hover:border-orange-500 hover:text-white">
           <category.icon
             alt={category.label}
             class="justify-center"
             width={category.width}
             height={category.height}
           />
-          <p class="text-center font-bold mt-2">{category.label}</p>
+          <p class="text-center font-bold mt-4 text-gray-800">
+            {category.label}
+          </p>
         </div>
       );
     })
