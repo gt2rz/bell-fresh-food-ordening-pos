@@ -18,6 +18,9 @@
       "@/icons/categories/*": [
         "src/icons/categories/*"
       ],
+      "@/data/*": [
+        "src/data/*"
+      ],
     }
   }
 }
