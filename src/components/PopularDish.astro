@@ -2,15 +2,15 @@
 import { popularDishes } from "@/data/popularDishes.json";
 ---
 
-<div class="py-12">
+<div class="pt-12">
   <h1>Popular Dish</h1>
-  <div class="flex flex-row py-20 gap-6 overflow-x-scroll">
+  <div class="flex flex-row pt-20 gap-6">
     {
       popularDishes.map((dish) => {
         return (
           <div class="group">
             <div class="relative flex flex-col w-52 h-72 border border-gray-300 shadow-lg rounded-[36px] cursor-pointer group-hover:bg-yellow-500 group-hover:text-white group-hover:border-yellow-600">
-              <div class="flex w-full justify-center absolute bottom-52 z-10">
+              <div class="flex w-full justify-center absolute bottom-52 z-10 group-hover:scale-110">
                 <img src={dish.image} alt={dish.name} class="w-32 h-32" />
               </div>
 
@@ -25,7 +25,7 @@ import { popularDishes } from "@/data/popularDishes.json";
                   </div>
                   <div class="flex justify-between mt-4">
                     <h1 class="font-bold text-xl">${dish.price}</h1>
-                    <p class="bg-yellow-500 rounded-full w-8 h-8 flex justify-center items-center text-white font-bold group-hover:bg-white group-hover:text-yellow-500">
+                    <p class="bg-yellow-500 rounded-full w-8 h-8 flex justify-center items-center text-white font-bold group-hover:bg-white group-hover:text-yellow-500 group-hover:scale-125">
                       +
                     </p>
                   </div>
