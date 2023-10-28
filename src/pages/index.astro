@@ -8,11 +8,24 @@ import PopularDish from "@/components/PopularDish.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header />
-  <Breadcumbs />
-  <Banner />
-  <Categories />
-  <PopularDish />
+  <div class="custom-grid">
+    <div class="">
+      <Header />
+      <Breadcumbs />
+      <Banner />
+      <Categories />
+      <PopularDish />
+    </div>
+    <div class="border rounded-lg bg-white w-full">
+      <p>My cart</p>
+    </div>
+  </div>
 </Layout>
 
-<style></style>
+<style>
+  .custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 600px;
+    grid-gap: 1rem;
+  }
+</style>
